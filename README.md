@@ -1,4 +1,4 @@
-PhaseFormer: From Patches to Phases for Efficient and Effective Time Series Forecasting
+# PhaseFormer: From Patches to Phases for Efficient and Effective Time Series Forecasting
 
 This repository provides the official implementation of PhaseFormer, a model for time series forecasting that works in the phase domain instead of traditional patch/segment-based methods. 
 The model is built with PyTorch Lightning to facilitate training and evaluation.
