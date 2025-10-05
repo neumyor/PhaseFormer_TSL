@@ -4,8 +4,8 @@
 TASK_NAME="long_term_forecast"
 MODEL="PhaseFormer"
 MODEL_ID="phaseformer_traffic"
-DATA="Traffic"
-ROOT_PATH="./data/Traffic/"
+DATA="custom"
+ROOT_PATH="../TimeSeriesSim/resources/all_datasets/traffic/"
 DATA_PATH="traffic.csv"
 SEQ_LEN=720
 TRAIN_EPOCHS=30
