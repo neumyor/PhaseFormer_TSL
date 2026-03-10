@@ -5,13 +5,13 @@ TASK_NAME="long_term_forecast"
 MODEL="PhaseFormer"
 MODEL_ID="phaseformer_traffic"
 DATA="custom"
-ROOT_PATH="../TimeSeriesSim/resources/all_datasets/traffic/"
+ROOT_PATH="./resources/all_datasets/traffic/"
 DATA_PATH="traffic.csv"
 SEQ_LEN=720
 TRAIN_EPOCHS=30
 BATCH_SIZE=16
 USE_GPU=1
-GPU=0
+GPU=3
 USE_HUBER=1
 HUBER_DELTA=1.0
 USE_REVIN=1
@@ -54,6 +54,16 @@ do
     --train_epochs $TRAIN_EPOCHS \
     --batch_size $BATCH_SIZE \
     --learning_rate $LR \
+    --use_gpu $USE_GPU \
+    --gpu $GPU \
+    --period_len 24 \
+    --lradj "constant" \
+    --phase_layers $LAYERS \
+    --latent_dim $LATENT_DIM \
+    --phase_encoder_hidden $ENCODER_HIDDEN \
+    --predictor_hidden $PREDICTOR_HIDDEN \
+    --phase_num_routers $NUM_ROUTERS \
+    --phase_attn_heads $ATT_HEADS \
     --use_revin $USE_REVIN \
     --revin_affine $REVIN_AFFINE \
     --revin_eps $REVIN_EPS \

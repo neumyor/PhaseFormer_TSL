@@ -35,7 +35,14 @@ class Exp_Long_Term_Forecast(Exp_Basic):
         return model_optim
 
     def _select_criterion(self):
-        criterion = nn.MSELoss()
+        use_huber = float(getattr(self.args, 'use_huber', 0)) > 0
+        if use_huber:
+            huber_delta = float(getattr(self.args, 'huber_delta', 1.0))
+            criterion = nn.HuberLoss(delta=huber_delta)
+            print('Using HuberLoss with delta={}'.format(huber_delta))
+        else:
+            criterion = nn.MSELoss()
+            print('Using MSELoss')
         return criterion
  
 
