@@ -43,7 +43,7 @@ If you find PhaseFormer useful in your research, please cite our ICLR 2026 paper
 ```bibtex
 @inproceedings{niu2026phaseformer,
   title={PhaseFormer: From Patches to Phases for Efficient and Effective Time Series Forecasting},
-  author={Niu, Yunhao and Deng, Jie and Tong, Yunhai},
+  author={Niu, Yiming and Deng, Jinliang and Tong, Yongxin},
   booktitle={International Conference on Learning Representations (ICLR)},
   year={2026}
 }
